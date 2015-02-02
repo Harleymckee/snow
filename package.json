@@ -1,0 +1,22 @@
+{
+  "name": "snow",
+  "version": "0.0.1",
+  "description": "(>.<)",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Harleymckee/snow.git"
+  },
+  "keywords": [
+    "snow"
+  ],
+  "author": "harley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harleymckee/snow/issues"
+  },
+  "homepage": "https://github.com/Harleymckee/snow"
+}
