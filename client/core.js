@@ -27,7 +27,7 @@ this.changeImage = function() {
 
 		var re = response.data, sponse = re.data;
 
-		console.log(sponse);
+		//console.log(sponse);
 
 
 

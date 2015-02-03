@@ -1,29 +1,70 @@
 
+
+
+<div id="wrap">
+<div id="supguys">
+
+
+
+
 <button ng-click="imgCtrl.changeImage()"> </button>
 
 
 <button ng-click="imgCtrl.clear()"> </button>
 
 
-<div id="wrap">
-
-<div ng-repeat="pic in imgCtrl.pics">
-<div class="pic" style="width:300px;">
-<img ng-src="{{pic.image_url}}" width="300px" height="300px">
+</div>
 </div>
 
-<script>
 
-(function() {
-$("div.pic").draggable({
-	stack: "div.pic" 
-});
 
-})();
+<div class="pichold" ng-repeat="pic in imgCtrl.pics">
 
-</script>
 
-</div>
+		<div class="pic" style="width:300px;">
+		<img ng-src="{{pic.image_url}}" width="300px" height="300px">
+		</div>
+
+		<script>
+
+		(function() {
+
+
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+
+
+		$("div.pic").draggable({
+			stack: ".pic",
+			create: function( event, ui ) {
+				
+				var indArr = [];
+				$('.pic').each(function() {
+
+					indArr.push($(this).zIndex());
+					
+
+				});
+
+				var tallest = Array.max(indArr)
+				console.log(tallest);
+				console.log(this);
+				$(this).zIndex(tallest)
+			
+				
+
+				
+
+			}
+
+		});
+
+		})();
+
+		</script>
+
+
 
 
 </div>
