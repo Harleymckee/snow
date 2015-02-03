@@ -23,7 +23,7 @@ var here = this, sponseArr = [];
 
 this.changeImage = function() {
 
-	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=science').then( function(response) {
+	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=dogs').then( function(response) {
 
 		var re = response.data, sponse = re.data;
 

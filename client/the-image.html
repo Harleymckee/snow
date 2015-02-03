@@ -43,13 +43,12 @@ Array.max = function( array ){
 				$('.pic').each(function() {
 
 					indArr.push($(this).zIndex());
-					
+					console.log($(this).position());
 
 				});
 
 				var tallest = Array.max(indArr)
-				console.log(tallest);
-				console.log(this);
+			
 				$(this).zIndex(tallest)
 			
 				
