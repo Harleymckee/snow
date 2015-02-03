@@ -17,21 +17,36 @@ app.directive('theImage', function() {
 app.controller('ImgController', ['$scope', '$http', function($scope, $http) {	
 
 
-var here = this;
+var here = this, sponseArr = [];
 
-	$http.get('http://api.giphy.com/v1/gifs/search?q=science&api_key=dc6zaTOxFJmzC&limit=5%22').then( function(response) {
 
-			var re = response.data, sponse = re.data;
+
+this.changeImage = function() {
+
+	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=science').then( function(response) {
+
+		var re = response.data, sponse = re.data;
 
 		console.log(sponse);
 
-		here.pics = sponse;
 
 
+		sponseArr.push(sponse);
+		here.pics = sponseArr;
 	});
 
+};
 
 
+
+
+this.clear = function() {
+
+		sponseArr = [];
+		here.pics = [];
+
+
+};
 
 
 

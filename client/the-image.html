@@ -1,9 +1,15 @@
 
-<button> </button>
+<button ng-click="imgCtrl.changeImage()"> </button>
+
+
+<button ng-click="imgCtrl.clear()"> </button>
+
+
+<div id="wrap">
 
 <div ng-repeat="pic in imgCtrl.pics">
 <div class="pic" style="width:300px;">
-<img ng-src="{{pic.images.original.url}}" width="300px" height="300px">
+<img ng-src="{{pic.image_url}}" width="300px" height="300px">
 </div>
 
 <script>
@@ -16,8 +22,11 @@ $("div.pic").draggable({
 })();
 
 </script>
+
 </div>
 
+
+</div>
 
 
 
