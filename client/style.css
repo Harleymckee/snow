@@ -17,15 +17,18 @@ body {
   top: 80%;
   right: 15px; }
   #supguys button {
-    margin-bottom: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 5px;
     display: block;
     width: 50px;
     height: 30px;
     cursor: pointer;
     background: red;
     border: 5px solid black;
-    border-radius: 15px; }
+    border-radius: 15px;
+    transition: border 1s ease; }
   #supguys button:nth-child(2) {
+    padding-bottom: 0px;
     display: block;
     width: 50px;
     height: 30px;
@@ -33,16 +36,15 @@ body {
     background: blue;
     border: 5px solid black; }
   #supguys button:hover {
-    margin-top: 5px;
-    width: 45px;
-    height: 25px;
     border: 5px solid green;
     filter: invert(100%);
     -webkit-filter: invert(100%);
     -moz-filter: invert(100%); }
+    #supguys button:hover button:nth-child(2) {
+      margin-bottom: -10px; }
   #supguys textarea {
     background: transparent;
-    margin-left: -80px;
+    margin-left: -82px;
     margin-bottom: 5px;
     height: 30px;
     width: 120px;
@@ -59,7 +61,12 @@ body {
     flex-direction: column;
     resize: none;
     cursor: auto;
-    padding: 0px; }
+    padding: 2px;
+    overflow-x: scroll;
+    white-space: pre-wrap;
+    word-wrap: normal;
+    transition: background 1s ease;
+    transition: border 1s ease; }
 
 .pic {
   margin-left: auto;

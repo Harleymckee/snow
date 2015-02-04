@@ -26,7 +26,7 @@ io.on('connection', function(socket){
 }); 
 
 
-var port = process.env.PORT || 3222; 
+var port = process.env.PORT || 3224; 
 
 
 http.listen(port, function() {

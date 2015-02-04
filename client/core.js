@@ -29,17 +29,19 @@ this.changeImage = function() {
 var tagg = this.tag;
 
 
-	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + tagg).then( function(response) {
+	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + tagg).then( function(response, err) {
+
 
 		var re = response.data, sponse = re.data;
-
-		//console.log(sponse);
-
-
-
+		console.log(response);
 		sponseArr.push(sponse);
-		here.pics = sponseArr;
-	});
+	here.pics = sponseArr;
+
+
+
+	
+	}); 
+
 
 };
 
@@ -48,8 +50,13 @@ var tagg = this.tag;
 
 this.clear = function() {
 
+if (confirm('Are ya sure?')) {
 		sponseArr = [];
 		here.pics = [];
+
+	} else { 
+		return;
+	}
 
 
 };

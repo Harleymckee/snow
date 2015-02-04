@@ -24,7 +24,8 @@ body {
 right: 15px;
       
      button {
-     	margin-bottom: 10px;
+     	padding-bottom:30px;
+     	margin-bottom: 5px;
      	 display: block;
 
 		width: 50px;
@@ -37,11 +38,16 @@ right: 15px;
 					border-radius: 15px;
 
 //     z-index: 100000;
+
+
+
+   transition: border 1s ease;
+
      
      }
       button:nth-child(2) {
 
-   
+   padding-bottom:0px;
      	 display: block;
 
 		width: 50px;
@@ -55,9 +61,7 @@ right: 15px;
 
      }
      button:hover {
-	margin-top: 5px;
-     	width: 45px;
-		height: 25px;
+	
 
 		border:5px solid green; 
 
@@ -65,12 +69,17 @@ right: 15px;
 
      	-webkit-filter: invert(100%);
      	-moz-filter: invert(100%);
+
+     	button:nth-child(2) {
+margin-bottom: -10px;
+     	}
      }
-	 
+
+
 
 textarea { 
 	background: transparent;
-	margin-left: -80px;
+	margin-left: -82px;
 		margin-bottom: 5px;
 	height: 30px;
 	width:120px ;
@@ -88,10 +97,16 @@ border-image-repeat: initial;
 flex-direction: column;
 resize: none;
 cursor: auto;
-padding: 0px;
-//white-space: pre-wrap;
-//word-wrap: break-word;
+padding: 2px;
+ overflow-x: scroll;
+white-space: pre-wrap;
+word-wrap: normal;
+
+ transition: background 1s ease;
+   transition: border 1s ease;
+
 }
+
 
 
 }
