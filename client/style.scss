@@ -1,6 +1,12 @@
 
 body {
 	margin: 0px;
+	 overflow-y: hidden;
+	  overflow-x: hidden;
+}
+
+*:focus {
+    outline: 0;
 }
 #wrap {
 	width: 100% ;
@@ -14,10 +20,11 @@ body {
    
 	position:fixed;
      z-index: 100000;
-     top: 90%;
-left: 48%;
+     top: 80%;
+right: 15px;
       
      button {
+     	margin-bottom: 10px;
      	 display: block;
 
 		width: 50px;
@@ -27,10 +34,14 @@ left: 48%;
 		background: red;
 			border:5px solid black; 
 
+					border-radius: 15px;
+
 //     z-index: 100000;
      
      }
-      button:last-child {
+      button:nth-child(2) {
+
+   
      	 display: block;
 
 		width: 50px;
@@ -44,9 +55,9 @@ left: 48%;
 
      }
      button:hover {
-
-     	width: 48px;
-		height: 28px;
+	margin-top: 5px;
+     	width: 45px;
+		height: 25px;
 
 		border:5px solid green; 
 
@@ -56,15 +67,55 @@ left: 48%;
      	-moz-filter: invert(100%);
      }
 	 
+
+textarea { 
+	background: transparent;
+	margin-left: -80px;
+		margin-bottom: 5px;
+	height: 30px;
+	width:120px ;
+	font-size:24px ;
+-webkit-appearance: none;
+
+border: 5px solid black;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+flex-direction: column;
+resize: none;
+cursor: auto;
+padding: 0px;
+//white-space: pre-wrap;
+//word-wrap: break-word;
 }
 
+
+}
+
+@mixin shadow($alpha) {
+
+      -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, $alpha);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, $alpha);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, $alpha); 
+
+}
+
+
 .pic {
+
 margin-left:auto; 
 margin-right:auto; 
 		position: absolute;
 		z-index: 10;
-	 
+	  
 	img{
+
+		 @include shadow(0.5);  
+// border-radius: 70px;
 
 	z-index: 10;
 	

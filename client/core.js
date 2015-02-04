@@ -19,11 +19,17 @@ app.controller('ImgController', ['$scope', '$http', function($scope, $http) {
 
 var here = this, sponseArr = [];
 
+this.tag = '8bit';
+
 
 
 this.changeImage = function() {
 
-	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=dogs').then( function(response) {
+
+var tagg = this.tag;
+
+
+	$http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + tagg).then( function(response) {
 
 		var re = response.data, sponse = re.data;
 

@@ -12,7 +12,7 @@
 
 <button ng-click="imgCtrl.clear()"> </button>
 
-
+<textarea ng-model="imgCtrl.tag">8bit</textarea>
 </div>
 </div>
 
@@ -21,8 +21,8 @@
 <div class="pichold" ng-repeat="pic in imgCtrl.pics">
 
 
-		<div class="pic" style="width:300px;">
-		<img ng-src="{{pic.image_url}}" width="300px" height="300px">
+		<div class="pic" >
+		<img ng-src="{{pic.image_url}}">
 		</div>
 
 		<script>
@@ -37,6 +37,7 @@ Array.max = function( array ){
 
 		$("div.pic").draggable({
 			stack: ".pic",
+			scroll: false, 
 			create: function( event, ui ) {
 				
 				var indArr = [];
@@ -47,13 +48,9 @@ Array.max = function( array ){
 
 				});
 
-				var tallest = Array.max(indArr)
+				var tallest = Array.max(indArr);
 			
-				$(this).zIndex(tallest)
-			
-				
-
-				
+				$(this).zIndex(tallest);
 
 			}
 
