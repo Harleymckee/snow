@@ -74,16 +74,10 @@ body {
   position: absolute;
   z-index: 10; }
   .pic img {
-    -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.5);
-    -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.5);
-    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.5);
     z-index: 10;
     position: absolute; }
 
 #giphy {
-  position: fixed;
-  z-index: 100000;
-  top: 94%;
-  right: 15px; }
+  margin-left: -81px; }
 
 /*# sourceMappingURL=style.css.map */
