@@ -14,7 +14,7 @@ body {
   display: block;
   position: fixed;
   z-index: 100000;
-  top: 80%;
+  top: 76%;
   right: 15px; }
   #supguys button {
     padding-bottom: 30px;
@@ -79,5 +79,11 @@ body {
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.5);
     z-index: 10;
     position: absolute; }
+
+#giphy {
+  position: fixed;
+  z-index: 100000;
+  top: 94%;
+  right: 15px; }
 
 /*# sourceMappingURL=style.css.map */
