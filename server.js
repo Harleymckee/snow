@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+
 
 
 app.engine('html', require('ejs').renderFile);
@@ -21,12 +21,8 @@ function home (req, res) {
 app.get('/', home);
 
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-}); 
 
-
-var port = process.env.PORT || 3224; 
+var port = process.env.PORT || 80; 
 
 
 http.listen(port, function() {
