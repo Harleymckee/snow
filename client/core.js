@@ -19,7 +19,7 @@ app.controller('ImgController', ['$scope', '$http', function($scope, $http) {
 
 var here = this, sponseArr = [];
 
-this.tag = '8bit';
+this.tag = 'Transparent';
 
 
 
