@@ -22,7 +22,7 @@ app.get('/', home);
 
 
 
-var port = process.env.PORT || 80; 
+var port = process.env.PORT || 3224; 
 
 
 http.listen(port, function() {

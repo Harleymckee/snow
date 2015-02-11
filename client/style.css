@@ -42,12 +42,12 @@ body {
     -moz-filter: invert(100%); }
     #supguys button:hover button:nth-child(2) {
       margin-bottom: -10px; }
-  #supguys textarea {
+  #supguys input {
     background: transparent;
-    margin-left: -82px;
+    margin-left: -102px;
     margin-bottom: 5px;
     height: 30px;
-    width: 120px;
+    width: 140px;
     font-size: 24px;
     -webkit-appearance: none;
     border: 5px solid black;
