@@ -1,6 +1,7 @@
 
 
 
+
 <div id="wrap">
 <div id="supguys">
 
@@ -14,7 +15,7 @@
 
 <input ng-model="imgCtrl.tag"></input>
 
-
+<!--
 
 <div id="giphy">
 
@@ -25,17 +26,20 @@
 </a>
 </div>
 
-</div>
-</div>
+-->
 
+</div>
+</div>
 
 
 <div class="pichold" ng-repeat="pic in imgCtrl.pics">
 
-
-		<div class="pic" >
+<!-- ng-style="{'margin-top' : imgCtrl.topp, 'margin-left' : imgCtrl.leftt}" -->
+		<div class="pic" ng-style="{'margin-top' : pic.topp, 'margin-left' : pic.leftt}" >
 		<img ng-src="{{pic.image_url}}">
 		</div>
+
+
 
 		<script>
 
@@ -46,6 +50,8 @@ Array.max = function( array ){
     return Math.max.apply( Math, array );
 };
 
+
+	//	$("div.pic").resizeable();
 
 		$("div.pic").draggable({
 			stack: ".pic",
@@ -67,6 +73,7 @@ Array.max = function( array ){
 			}
 
 		});
+
 
 		})();
 
