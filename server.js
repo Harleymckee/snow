@@ -1,27 +1,12 @@
 var express = require('express');
-var path = require('path'); 
-//var mongoose = require('mongoose');
+var path = require('path');
 var fs = require('fs');
 var app = express();
-
-
-
-
-
-
-
-
 
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname + '/client')));
-
-
-
-
-
-
 
 function home (req, res) {
   res.setHeader('Content-Type', 'text/html');
@@ -30,56 +15,32 @@ function home (req, res) {
 
 app.get('/', home);
 
-
-
-
-
-//var osc = require("osc");
-
-
-
-
-var port = process.env.PORT || 3030; 
+var port = process.env.PORT || 3030;
 
 
 var server = app.listen(port, function() {
-    					console.log('kk 3030');
-							});
+    				  console.log('kk 3030');
+            });
 
 
 
-var io        = require('socket.io')(server);
+var io = require('socket.io')(server);
 
 
 
 io.on('connection', function(socket){
-  console.log('c\'onnected');
+  var OscReceiver = require('osc-receiver')
+    , receiver = new OscReceiver();
+  // hook it to a port
+  receiver.bind(9999);
+  // listen for the message osc event
+  receiver.on('message', function(a, b, c) {
+    var args = Array.prototype.slice.call(arguments, 1);
 
-
-
-var OscReceiver = require('osc-receiver')
-  , receiver = new OscReceiver();
- 
-receiver.bind(9999);
- 
-
- 
-receiver.on('message', function() {
- var address = arguments[0];
-  var args = Array.prototype.slice.call(arguments, 1);
-
-  console.log(address, args);
-
-  io.emit('supguys', args)
+    // emit to front end
+    io.emit('supguys', args)
 });
 
 
 
-
 });
-
-
-
- 
-
-
